@@ -1,3 +1,45 @@
+/* Import Campton font - add your specific font paths */
+@font-face {
+  font-family: "Campton";
+  src: url("./assets/fonts/Campton-Light.woff2") format("woff2"),
+    url("./assets/fonts/Campton-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Campton";
+  src: url("./assets/fonts/Campton-Book.woff2") format("woff2"),
+    url("./assets/fonts/Campton-Book.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Campton";
+  src: url("./assets/fonts/Campton-Medium.woff2") format("woff2"),
+    url("./assets/fonts/Campton-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Campton";
+  src: url("./assets/fonts/Campton-Bold.woff2") format("woff2"),
+    url("./assets/fonts/Campton-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Apply Campton to all elements */
+* {
+  font-family: "Campton", sans-serif;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
