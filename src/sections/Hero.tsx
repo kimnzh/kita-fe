@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../assets/logo.webp"; // Import the logo properly
 
 const Hero: React.FC = () => {
   return (
@@ -38,12 +39,11 @@ const Hero: React.FC = () => {
                 <div className="w-56 h-56 md:w-72 md:h-72 rounded-full bg-purple/30 flex items-center justify-center relative overflow-hidden">
                   {/* Male/female symbol overlay */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-red-400 text-8xl transform rotate-45">
-                      ♀
-                    </div>
-                    <div className="text-blue-400 text-8xl transform -rotate-45">
-                      ♂
-                    </div>
+                    <img
+                      src={logo}
+                      alt="KITA Logo"
+                      className="w-3/4 h-3/4 object-contain"
+                    />
                   </div>
 
                   {/* Medical icons */}
@@ -57,7 +57,7 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Welcome message section with purple border - full width */}
-        <div className="mt-16 md:mt-24 border-8 border-[#9900FF] p-6 md:p-10 w-full">
+        <div className="mt-16 md:mt-24 border-8 border-[#9900FF]/50 p-6 md:p-10 w-full">
           <h2 className="text-[#9900FF] text-3xl md:text-4xl font-bold text-purple mb-6 text-center">
             SELAMAT DATANG !
           </h2>

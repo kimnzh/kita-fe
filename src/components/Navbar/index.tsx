@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
       }`}
     >
       {/* Top bar - Contact & Social */}
-      <div className="bg-[#0095FF] text-white border-b font-bold">
+      <div className="bg-[#1177BF] text-white border-b font-bold">
         <div className="container mx-auto px-4 lg:px-6 py-2 sm:py-3 flex flex-wrap sm:flex-nowrap gap-2 justify-between items-center">
           {/* Contact Info */}
           <div className="flex items-center gap-3 sm:gap-6 text-xs sm:text-sm order-1">
@@ -107,7 +107,7 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Main Navigation Bar */}
-      <div className="bg-[#0095FF] text-white">
+      <div className="bg-[#1177BF] text-white">
         <div className="container mx-auto px-4 lg:px-6 flex items-center justify-between">
           {/* Logo */}
 

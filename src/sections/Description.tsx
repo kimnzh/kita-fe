@@ -10,7 +10,7 @@ const Description: React.FC = () => {
 
         <div className="grid md:grid-cols-2 gap-8">
           {/* Card 1: Sex Education */}
-          <div className="border-8 border-[#9900FF] p-8 text-white">
+          <div className="border-8 border-[#9900FF]/50 p-8 text-white">
             <div className="max-w-lg mx-auto">
               <h3 className="text-xl md:text-2xl font-bold mb-6 text-center">
                 Pendidikan seks itu buat semua orang! Dengan pendekatan yang
@@ -33,7 +33,7 @@ const Description: React.FC = () => {
           </div>
 
           {/* Card 2: Mental Health */}
-          <div className="border-8 border-[#9900FF] p-8 text-white">
+          <div className="border-8 border-[#9900FF]/50 p-8 text-white">
             <div className="max-w-lg mx-auto">
               <h3 className="text-xl md:text-2xl font-bold mb-6 text-center">
                 Kesehatan mental itu bukan cuma soal nggak stres atau nggak
