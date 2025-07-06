@@ -40,6 +40,7 @@ const Features: React.FC = () => {
 
           {/* Card 2: Appointment */}
           <div className="bg-gradient-to-b from-gray-800/60 to-gray-900/60 rounded-lg overflow-hidden shadow-lg">
+          <Link to="/appointment" className="bg-gradient-to-b from-gray-800/60 to-gray-900/60 rounded-lg overflow-hidden shadow-lg transition-opacity hover:opacity-80">
             <div className="h-48 bg-blue-200 relative">
               <img
                 src={appointment}
@@ -55,10 +56,14 @@ const Features: React.FC = () => {
                 Buat janji dengan psikolog untuk menangani kesehatan mentalmu
               </p>
             </div>
+          </Link>
           </div>
 
           {/* Card 3: Screening */}
-          <div className="bg-gradient-to-b from-gray-800/60 to-gray-900/60 rounded-lg overflow-hidden shadow-lg">
+          <Link
+            to="/screening"
+            className="bg-gradient-to-b from-gray-800/60 to-gray-900/60 rounded-lg overflow-hidden shadow-lg transition-opacity hover:opacity-80"
+          >
             <div className="h-48 bg-blue-200 relative">
               <img
                 src={screening}
@@ -75,7 +80,7 @@ const Features: React.FC = () => {
                 seksual.
               </p>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </section>

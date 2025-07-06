@@ -7,6 +7,9 @@ import Hero from "./sections/Hero";
 import Profile from "./sections/Profile";
 import Reading from "./sections/Reading";
 import ForumPage from "./sections/forum/page"; //ForumPage"; // Pastikan file ini ada
+import ScreeningPage from "./sections/screening/page"; //ScreeningPage"; // Pastikan file ini ada
+import AppointmentPage from "./sections/appointment/page"; //AppointmentPage"; // Pastikan file ini ada
+
 
 function App() {
   return (
@@ -28,6 +31,8 @@ function App() {
             }
           />
           <Route path="/forum" element={<ForumPage />} />
+          <Route path="/screening" element={<ScreeningPage />} />
+          <Route path="/appointment" element={<AppointmentPage />} />
         </Routes>
       </main>
     </Router>
