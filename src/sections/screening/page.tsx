@@ -240,7 +240,7 @@ export default function ScreeningPage() {
           <div className="flex items-center space-x-2">
             {/* Assuming avatar.png is in public folder or adjust path */}
             <img
-              src="/src/assets/avatar.png"
+              src="/avatar.png"
               alt="User Avatar"
               className="w-8 h-8 rounded-full border-2 border-gray-300 object-cover"
             />

@@ -22,7 +22,7 @@ const initialConversations: Conversation[] = [
     id: 1,
     name: 'Dr. Madelyn Vetrovs',
     role: 'Dentist',
-    avatar: '/src/assets/MadelynVetrovs.jpg',
+    avatar: '/MadelynVetrovs.jpg',
     lastMessage: 'Me: thank you...',
     unreadCount: 1,
     messages: [
@@ -36,7 +36,7 @@ const initialConversations: Conversation[] = [
     id: 2,
     name: 'Dr. Kierra Korsgaard',
     role: 'Dentist',
-    avatar: '/src/assets/KierraKorsgaard.jpg',
+    avatar: '/KierraKorsgaard.jpg',
     lastMessage: 'Me: Okay, thanks.',
     unreadCount: 0,
     messages: [
@@ -48,7 +48,7 @@ const initialConversations: Conversation[] = [
     id: 3,
     name: 'Dr. Kaiya Curtis',
     role: 'Dentist',
-    avatar: '/src/assets/KaiyaCurtis.jpg',
+    avatar: '/KaiyaCurtis.jpg',
     lastMessage: 'Sure, no problem.',
     unreadCount: 1,
     messages: [
@@ -60,7 +60,7 @@ const initialConversations: Conversation[] = [
     id: 4,
     name: 'Dr. Martin Westervelt',
     role: 'Dentist',
-    avatar: '/src/assets/MartinWestervelt.jpg',
+    avatar: '/MartinWestervelt.jpg',
     lastMessage: 'Me: Got it.',
     unreadCount: 0,
     messages: [
@@ -72,7 +72,7 @@ const initialConversations: Conversation[] = [
     id: 5,
     name: 'Haylie Septimus',
     role: 'Dental Hygienist',
-    avatar: '/src/assets/HaylieSeptimus.jpg',
+    avatar: '/HaylieSeptimus.jpg',
     lastMessage: 'Hello!',
     unreadCount: 1,
     messages: [
@@ -84,7 +84,7 @@ const initialConversations: Conversation[] = [
     id: 6,
     name: 'Jocelyn Mango',
     role: 'Dental Hygienist',
-    avatar: '/src/assets/JocelynMango.jpg',
+    avatar: '/JocelynMango.jpg',
     lastMessage: 'See you then!',
     unreadCount: 0,
     messages: [
@@ -96,7 +96,7 @@ const initialConversations: Conversation[] = [
     id: 7,
     name: 'Terry Botosh',
     role: 'Dental Hygienist',
-    avatar: '/src/assets/TerryBotosh.jpg',
+    avatar: '/TerryBotosh.jpg',
     lastMessage: 'Thanks a lot!',
     unreadCount: 0,
     messages: [

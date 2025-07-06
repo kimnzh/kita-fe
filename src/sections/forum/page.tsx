@@ -10,8 +10,8 @@ export default function ForumPage() {
       id: 1,
       title: "Kenapa aku malu bertanya tentang Kespro",
       author: "Rara_Remaja Peduli",
-      avatar: "/src/assets/avatar.png",
-      image: "/src/assets/post1.png",
+      avatar: "/avatar.png",
+      image: "/post1.png",
       tags: ["#remaja", "#kespro", "#stigma"],
       views: "964,258",
       likes: "64,755",
@@ -22,8 +22,8 @@ export default function ForumPage() {
       id: 2,
       title: "Tes IMS Mandiri: Pengalaman & Kapan Harus Cemas?",
       author: "Anonim_Sehat",
-      avatar: "/src/assets/avatar.png",
-      image: "/src/assets/post2.png",
+      avatar: "/avatar.png",
+      image: "/post2.png",
       tags: ["#IMS", "#SKRINING", "#Kesehatan"],
       views: "964,258",
       likes: "64,755",
@@ -34,8 +34,8 @@ export default function ForumPage() {
       id: 3,
       title: "Butuh Dukungan Setelah Trauma Seksual, Ke Mana?",
       author: "Pejuang_Diri",
-      avatar: "/src/assets/avatar.png",
-      image: "/src/assets/post3.png",
+      avatar: "/avatar.png",
+      image: "/post3.png",
       tags: ["#trauma", "#psikolog", "#dukungan"],
       views: "964,258",
       likes: "64,755",
@@ -91,7 +91,7 @@ export default function ForumPage() {
             <div className="flex items-center space-x-2 bg-slate-700 rounded-lg px-3 py-2">
               <span className="inline-flex items-center justify-center h-8 w-8 rounded-full" style={{ background: "#F9DFC0" }}>
                 <img 
-                  src="/src/assets/avatar.png" 
+                  src="/avatar.png" 
                   alt="Profile" 
                   className="w-8 h-8 rounded-full object-cover"
                 />
@@ -132,7 +132,7 @@ export default function ForumPage() {
             <div className="flex items-center space-x-4">
               <span className="inline-flex items-center justify-center h-12 w-12 rounded-full" style={{ background: "#F9DFC0" }}>
                 <img 
-                  src="/src/assets/avatar.png" 
+                  src="/avatar.png" 
                   alt="Your avatar" 
                   className="w-12 h-12 rounded-full object-cover"
                 />

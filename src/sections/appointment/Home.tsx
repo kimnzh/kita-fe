@@ -26,23 +26,23 @@ const Home = () => {
             </p>
           </div>
         </div>
-        <img src="/src/assets/location.png" alt="Map Placeholder" className="w-32 h-32 object-cover rounded-md" />
+        <img src="/location.png" alt="Map Placeholder" className="w-32 h-32 object-cover rounded-md" />
       </div>
 
       {/* Booking Section - Doctors */}
       <h2 className="text-xl font-semibold text-gray-800 mb-4">Booking</h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
         {[
-          { name: 'Dr. Kierra Korsgaard', img: '/src/assets/KierraKorsgaard.jpg' },
-          { name: 'Dr. Kaiya Curtis', img: '/src/assets/KaiyaCurtis.jpg' },
-          { name: 'Dr. Martin Westervelt', img: '/src/assets/MartinWestervelt.jpg' },
-          { name: 'Dr. Madelyn Vetrovs', img: '/src/assets/MadelynVetrovs.jpg' },
-          { name: 'Haylie Septimus', img: '/src/assets/HaylieSeptimus.jpg' },
-          { name: 'Jocelyn Mango', img: '/src/assets/JocelynMango.jpg' },
-          { name: 'Terry Botosh', img: '/src/assets/TerryBotosh.jpg' },
-          { name: 'Carla Kenter', img: '/src/assets/CarlaKenter.jpg' },
-          { name: 'Tiana Levin', img: '/src/assets/TianaLevin.jpg' },
-          { name: 'Abram Aminoff', img: '/src/assets/AbramAminoff.jpg' },
+          { name: 'Dr. Kierra Korsgaard', img: '/KierraKorsgaard.jpg' },
+          { name: 'Dr. Kaiya Curtis', img: '/KaiyaCurtis.jpg' },
+          { name: 'Dr. Martin Westervelt', img: '/MartinWestervelt.jpg' },
+          { name: 'Dr. Madelyn Vetrovs', img: '/MadelynVetrovs.jpg' },
+          { name: 'Haylie Septimus', img: '/HaylieSeptimus.jpg' },
+          { name: 'Jocelyn Mango', img: '/JocelynMango.jpg' },
+          { name: 'Terry Botosh', img: '/TerryBotosh.jpg' },
+          { name: 'Carla Kenter', img: '/CarlaKenter.jpg' },
+          { name: 'Tiana Levin', img: '/TianaLevin.jpg' },
+          { name: 'Abram Aminoff', img: '/AbramAminoff.jpg' },
         ].map((person, index) => (
           <div key={index} className="bg-white rounded-lg shadow-sm overflow-hidden text-center p-3">
             <img

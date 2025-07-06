@@ -42,7 +42,7 @@ const Appointments = () => {
       id: 1,
       doctor: 'Dr. Madelyn Vetrovs',
       role: 'Dentist',
-      avatar: '/src/assets/MadelynVetrovs.jpg',
+      avatar: '/MadelynVetrovs.jpg',
       location: 'Pharmacy A - xxx building, xxx street, xxx city',
       timeRange: 'Monday 8:00- 9:00 am',
       date: 'July 31, 2025', // Using current year
@@ -53,7 +53,7 @@ const Appointments = () => {
       id: 2,
       doctor: 'Dr. Madelyn Vetrovs',
       role: 'Dentist',
-      avatar: '/src/assets/MadelynVetrovs.jpg',
+      avatar: '/MadelynVetrovs.jpg',
       location: 'Pharmacy A - xxx building, xxx street, xxx city',
       timeRange: 'Monday 8:00- 9:00 am',
       date: 'July 31, 2025', // Using current year
@@ -64,7 +64,7 @@ const Appointments = () => {
       id: 3,
       doctor: 'Dr. Kaiya Curtis',
       role: 'Dentist',
-      avatar: '/src/assets/KaiyaCurtis.jpg',
+      avatar: '/KaiyaCurtis.jpg',
       location: 'Clinic B - yyy building, yyy street, yyy city',
       timeRange: 'Tuesday 10:00- 11:00 am',
       date: 'July 2, 2025', // Past date
@@ -74,7 +74,7 @@ const Appointments = () => {
       id: 4,
       doctor: 'Dr. Martin Westervelt',
       role: 'Surgeon',
-      avatar: '/src/assets/MartinWestervelt.jpg',
+      avatar: '/MartinWestervelt.jpg',
       location: 'Hospital C - zzz building, zzz street, zzz city',
       timeRange: 'Wednesday 2:00- 3:00 pm',
       date: 'June 20, 2025', // Past date

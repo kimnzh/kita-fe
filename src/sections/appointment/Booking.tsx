@@ -20,19 +20,19 @@ const Booking = () => {
 
 
   const doctors: Doctor[] = [
-    { name: 'Dr. Kierra Korsgaard', img: '/src/assets/KierraKorsgaard.jpg', description: 'Lorem ipsum dolor sit amet consectetur. Dictum et sed rhoncus tincidunt. Id pharetra orci ut dignissim non elit in eget nec nec. Gravida sed eget felis lectus nulla amet nec id morbi. Placerat dui bibendum convallis. Read More' },
-    { name: 'Dr. Kaiya Curtis', img: '/src/assets/KaiyaCurtis.jpg', description: 'Dr. Kaiya Curtis specializes in general dentistry and is committed to providing excellent patient care.' },
-    { name: 'Dr. Martin Westervelt', img: '/src/assets/MartinWestervelt.jpg', description: 'Dr. Martin Westervelt is an experienced orthodontist with a focus on clear aligner treatments.' },
-    { name: 'Dr. Madelyn Vetrovs', img: '/src/assets/MadelynVetrovs.jpg', description: 'Dr. Madelyn Vetrovs offers comprehensive family dental services, from preventative care to restorative procedures.' },
+    { name: 'Dr. Kierra Korsgaard', img: '/KierraKorsgaard.jpg', description: 'Lorem ipsum dolor sit amet consectetur. Dictum et sed rhoncus tincidunt. Id pharetra orci ut dignissim non elit in eget nec nec. Gravida sed eget felis lectus nulla amet nec id morbi. Placerat dui bibendum convallis. Read More' },
+    { name: 'Dr. Kaiya Curtis', img: '/KaiyaCurtis.jpg', description: 'Dr. Kaiya Curtis specializes in general dentistry and is committed to providing excellent patient care.' },
+    { name: 'Dr. Martin Westervelt', img: '/MartinWestervelt.jpg', description: 'Dr. Martin Westervelt is an experienced orthodontist with a focus on clear aligner treatments.' },
+    { name: 'Dr. Madelyn Vetrovs', img: '/MadelynVetrovs.jpg', description: 'Dr. Madelyn Vetrovs offers comprehensive family dental services, from preventative care to restorative procedures.' },
   ];
 
   const dentalHygienists: Doctor[] = [
-    { name: 'Haylie Septimus', img: '/src/assets/HaylieSeptimus.jpg', description: 'Haylie Septimus is dedicated to promoting oral hygiene and educating patients on proper dental care.' },
-    { name: 'Jocelyn Mango', img: '/src/assets/JocelynMango.jpg', description: 'Jocelyn Mango provides thorough cleanings and offers advice on maintaining a healthy smile.' },
-    { name: 'Terry Botosh', img: '/src/assets/TerryBotosh.jpg', description: 'Terry Botosh focuses on preventative dental care and patient comfort during procedures.' },
-    { name: 'Carla Kenter', img: '/src/assets/CarlaKenter.jpg', description: 'Carla Kenter is passionate about helping patients achieve optimal oral health through personalized care.' },
-    { name: 'Tiana Levin', img: '/src/assets/TianaLevin.jpg', description: 'Tiana Levin provides professional dental cleanings and assists in various dental procedures.' },
-    { name: 'Abram Aminoff', img: '/src/assets/AbramAminoff.jpg', description: 'Abram Aminoff is skilled in providing comprehensive oral hygiene services and patient education.' },
+    { name: 'Haylie Septimus', img: '/HaylieSeptimus.jpg', description: 'Haylie Septimus is dedicated to promoting oral hygiene and educating patients on proper dental care.' },
+    { name: 'Jocelyn Mango', img: '/JocelynMango.jpg', description: 'Jocelyn Mango provides thorough cleanings and offers advice on maintaining a healthy smile.' },
+    { name: 'Terry Botosh', img: '/TerryBotosh.jpg', description: 'Terry Botosh focuses on preventative dental care and patient comfort during procedures.' },
+    { name: 'Carla Kenter', img: '/CarlaKenter.jpg', description: 'Carla Kenter is passionate about helping patients achieve optimal oral health through personalized care.' },
+    { name: 'Tiana Levin', img: '/TianaLevin.jpg', description: 'Tiana Levin provides professional dental cleanings and assists in various dental procedures.' },
+    { name: 'Abram Aminoff', img: '/AbramAminoff.jpg', description: 'Abram Aminoff is skilled in providing comprehensive oral hygiene services and patient education.' },
   ];
 
   const pharmacies = [
@@ -42,7 +42,7 @@ const Booking = () => {
       hours: 'Mon - Sat: 8am - 7pm',
       phone: '123-456-7890',
       address: 'xxx building, xxx street, xxx city',
-      mapImage: '/src/assets/location.png',
+      mapImage: '/location.png',
     },
     {
       id: 2,
@@ -50,7 +50,7 @@ const Booking = () => {
       hours: 'Mon - Sat: 8am - 7pm',
       phone: '123-456-7890',
       address: 'xxx building, xxx street, xxx city',
-      mapImage: '/src/assets/location.png',
+      mapImage: '/location.png',
     },
     {
       id: 3,
@@ -58,7 +58,7 @@ const Booking = () => {
       hours: 'Mon - Sat: 8am - 7pm',
       phone: '123-456-7890',
       address: 'xxx building, xxx street, xxx city',
-      mapImage: '/src/assets/location.png',
+      mapImage: '/location.png',
     },
     {
       id: 4,
@@ -66,7 +66,7 @@ const Booking = () => {
       hours: 'Mon - Sat: 8am - 7pm',
       phone: '123-456-7890',
       address: 'xxx building, xxx street, xxx city',
-      mapImage: '/src/assets/location.png',
+      mapImage: '/location.png',
     },
     {
       id: 5,
@@ -74,7 +74,7 @@ const Booking = () => {
       hours: 'Mon - Sat: 8am - 7pm',
       phone: '123-456-7890',
       address: 'xxx building, xxx street, xxx city',
-      mapImage: '/src/assets/location.png',
+      mapImage: '/location.png',
     },
   ];
 
