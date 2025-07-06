@@ -1,8 +1,10 @@
 import { Search, MessageCircle, Bell, Home, Hash, FileText, Settings, Heart, MessageSquare, Eye, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { useNavigate } from 'react-router-dom';
 
 export default function ForumPage() {
+  const navigate = useNavigate();
   const posts = [
     {
       id: 1,
@@ -57,9 +59,15 @@ export default function ForumPage() {
       <header className="bg-slate-800 border-b border-slate-700 px-6 py-4">
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           <div className="flex items-center space-x-2">
-            <span className="inline-flex items-center justify-center h-12 w-12 rounded-full">
-              <img src="/logo.webp" alt="Logo" className="h-8 w-auto" />
-            </span>
+            <button
+              type="button"
+              onClick={() => navigate('/')}
+              className="focus:outline-none"
+            >
+              <span className="inline-flex items-center justify-center h-12 w-12 rounded-full">
+                <img src="/logo.webp" alt="Logo" className="h-8 w-auto" />
+              </span>
+            </button>
             <span className="text-white text-xl font-bold tracking-wide">KITA</span>
           </div>
           
