@@ -310,7 +310,7 @@ const Appointments = () => {
 
       {/* Cancel Appointment Modal */}
       {showCancelModal && appointmentToCancel && (
-        <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50">
+        <div className="fixed inset-0 bg-gray-900 bg-opacity-80 flex items-center justify-center z-50">
           <div className="bg-white rounded-lg shadow-xl p-8 max-w-sm w-full text-center">
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Cancel Appointment</h3>
             <p className="text-gray-600 mb-6">

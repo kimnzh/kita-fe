@@ -6,73 +6,33 @@ import { BookingIcon } from '../../components/Icons'; // Reusing BookingIcon for
 type BookingTab = 'date' | 'doctor' | 'pharmacy';
 type PharmacyViewMode = 'grid' | 'list'; // New state for pharmacy view
 
-interface DoctorInfo {
+interface Doctor {
   name: string;
   img: string;
-  description: string; // New field for hover info
+  description?: string; // Optional description for the tooltip
 }
 
 const Booking = () => {
   const [activeTab, setActiveTab] = useState<BookingTab>('date');
   const [pharmacyViewMode, setPharmacyViewMode] = useState<PharmacyViewMode>('grid');
-  const [hoveredDoctor, setHoveredDoctor] = useState<DoctorInfo | null>(null); // State for hover effect
+  const [hoveredDoctor, setHoveredDoctor] = useState<Doctor | null>(null);
+  const [tooltipPosition, setTooltipPosition] = useState<{ x: number; y: number } | null>(null);
 
-  // Updated doctors data with description
-  const doctors: DoctorInfo[] = [
-    {
-      name: 'Dr. Kierra Korsgaard',
-      img: '/avatars/kierra.jpg', // Adjusted path
-      description: 'Lorem ipsum dolor sit amet consectetur. Dictum et sed rhoncus tincidunt, id pharetra orci ut dignissim non elit in eget nec. Gravida sed eget felis lectus nulla amet nec id moroi. Placerat dui bibendum convallis.',
-    },
-    {
-      name: 'Dr. Kaiya Curtis',
-      img: '/avatars/kaiya.jpg', // Adjusted path
-      description: 'An experienced general practitioner with a focus on holistic health. Dr. Curtis is known for her compassionate approach and patient-centered care.',
-    },
-    {
-      name: 'Dr. Martin Westervelt',
-      img: '/avatars/martin.jpg', // Adjusted path
-      description: 'Specializing in internal medicine, Dr. Westervelt brings years of experience in diagnosing and treating complex adult diseases. He is dedicated to continuous medical education.',
-    },
-    {
-      name: 'Dr. Madelyn Vetrovs',
-      img: '/avatars/madelyn.jpg', // Adjusted path
-      description: 'A dedicated pediatrician committed to the health and well-being of children. Dr. Vetrovs provides comprehensive care from infancy through adolescence.',
-    },
+
+  const doctors: Doctor[] = [
+    { name: 'Dr. Kierra Korsgaard', img: '/src/assets/KierraKorsgaard.jpg', description: 'Lorem ipsum dolor sit amet consectetur. Dictum et sed rhoncus tincidunt. Id pharetra orci ut dignissim non elit in eget nec nec. Gravida sed eget felis lectus nulla amet nec id morbi. Placerat dui bibendum convallis. Read More' },
+    { name: 'Dr. Kaiya Curtis', img: '/src/assets/KaiyaCurtis.jpg', description: 'Dr. Kaiya Curtis specializes in general dentistry and is committed to providing excellent patient care.' },
+    { name: 'Dr. Martin Westervelt', img: '/src/assets/MartinWestervelt.jpg', description: 'Dr. Martin Westervelt is an experienced orthodontist with a focus on clear aligner treatments.' },
+    { name: 'Dr. Madelyn Vetrovs', img: '/src/assets/MadelynVetrovs.jpg', description: 'Dr. Madelyn Vetrovs offers comprehensive family dental services, from preventative care to restorative procedures.' },
   ];
 
-  // Updated dentalHygienists data with description
-  const dentalHygienists: DoctorInfo[] = [
-    {
-      name: 'Haylie Septimus',
-      img: '/avatars/haylie.jpg', // Adjusted path
-      description: 'Haylie is a meticulous dental hygienist, passionate about preventive oral care. She educates patients on proper hygiene techniques for lasting dental health.',
-    },
-    {
-      name: 'Jocelyn Mango',
-      img: '/avatars/jocelyn.jpg', // Adjusted path
-      description: 'Jocelyn provides gentle yet thorough cleanings and oral health assessments. Her friendly demeanor puts patients at ease during their dental visits.',
-    },
-    {
-      name: 'Terry Botosh',
-      img: '/avatars/terry.jpg', // Adjusted path
-      description: 'Terry focuses on patient comfort and comprehensive dental hygiene. He is skilled in various cleaning techniques and periodontal care.',
-    },
-    {
-      name: 'Carla Kenter',
-      img: '/avatars/carla.jpg', // Adjusted path
-      description: 'Carla is committed to helping patients achieve optimal oral health. She provides personalized hygiene plans and is an expert in stain removal.',
-    },
-    {
-      name: 'Tiana Levin',
-      img: '/avatars/tiana.jpg', // Adjusted path
-      description: 'Tiana specializes in advanced dental hygiene procedures and patient education. She ensures every patient receives the highest standard of preventive care.',
-    },
-    {
-      name: 'Abram Aminoff',
-      img: '/avatars/abram.jpg', // Adjusted path
-      description: 'Abram is a skilled dental hygienist with a strong focus on patient well-being. He provides thorough cleanings and valuable advice for maintaining healthy gums and teeth.',
-    },
+  const dentalHygienists: Doctor[] = [
+    { name: 'Haylie Septimus', img: '/src/assets/HaylieSeptimus.jpg', description: 'Haylie Septimus is dedicated to promoting oral hygiene and educating patients on proper dental care.' },
+    { name: 'Jocelyn Mango', img: '/src/assets/JocelynMango.jpg', description: 'Jocelyn Mango provides thorough cleanings and offers advice on maintaining a healthy smile.' },
+    { name: 'Terry Botosh', img: '/src/assets/TerryBotosh.jpg', description: 'Terry Botosh focuses on preventative dental care and patient comfort during procedures.' },
+    { name: 'Carla Kenter', img: '/src/assets/CarlaKenter.jpg', description: 'Carla Kenter is passionate about helping patients achieve optimal oral health through personalized care.' },
+    { name: 'Tiana Levin', img: '/src/assets/TianaLevin.jpg', description: 'Tiana Levin provides professional dental cleanings and assists in various dental procedures.' },
+    { name: 'Abram Aminoff', img: '/src/assets/AbramAminoff.jpg', description: 'Abram Aminoff is skilled in providing comprehensive oral hygiene services and patient education.' },
   ];
 
   const pharmacies = [
@@ -82,7 +42,7 @@ const Booking = () => {
       hours: 'Mon - Sat: 8am - 7pm',
       phone: '123-456-7890',
       address: 'xxx building, xxx street, xxx city',
-      mapImage: '/map_placeholder.png', // Adjusted path
+      mapImage: '/src/assets/location.png',
     },
     {
       id: 2,
@@ -90,7 +50,7 @@ const Booking = () => {
       hours: 'Mon - Sat: 8am - 7pm',
       phone: '123-456-7890',
       address: 'xxx building, xxx street, xxx city',
-      mapImage: '/map_placeholder.png', // Adjusted path
+      mapImage: '/src/assets/location.png',
     },
     {
       id: 3,
@@ -98,7 +58,7 @@ const Booking = () => {
       hours: 'Mon - Sat: 8am - 7pm',
       phone: '123-456-7890',
       address: 'xxx building, xxx street, xxx city',
-      mapImage: '/map_placeholder.png', // Adjusted path
+      mapImage: '/src/assets/location.png',
     },
     {
       id: 4,
@@ -106,7 +66,7 @@ const Booking = () => {
       hours: 'Mon - Sat: 8am - 7pm',
       phone: '123-456-7890',
       address: 'xxx building, xxx street, xxx city',
-      mapImage: '/map_placeholder.png', // Adjusted path
+      mapImage: '/src/assets/location.png',
     },
     {
       id: 5,
@@ -114,9 +74,24 @@ const Booking = () => {
       hours: 'Mon - Sat: 8am - 7pm',
       phone: '123-456-7890',
       address: 'xxx building, xxx street, xxx city',
-      mapImage: '/map_placeholder.png', // Adjusted path
+      mapImage: '/src/assets/location.png',
     },
   ];
+
+  const handleMouseEnter = (event: React.MouseEvent<HTMLDivElement>, doctor: Doctor) => {
+    setHoveredDoctor(doctor);
+    // Position the tooltip near the cursor, or relative to the hovered element
+    const rect = event.currentTarget.getBoundingClientRect();
+    setTooltipPosition({
+      x: rect.left + window.scrollX + rect.width / 2, // Center of the card
+      y: rect.top + window.scrollY - 10, // Slightly above the card
+    });
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredDoctor(null);
+    setTooltipPosition(null);
+  };
 
   const renderTabContent = () => {
     switch (activeTab) {
@@ -145,8 +120,8 @@ const Booking = () => {
                   <div className="flex-1 p-1">
                     {/* Time Slots */}
                     <div className="text-gray-500 text-xs text-left mb-2 pl-1">7am</div>
-                    <div className="bg-blue-600 text-white rounded-md p-1 mb-1 cursor-pointer hover:bg-blue-700 text-xs">8:00am <br/> Dr. Devon Miles</div>
-                    <div className="bg-blue-600 text-white rounded-md p-1 mb-1 cursor-pointer hover:bg-blue-700 text-xs">9:00am <br/> Dr. Devon Miles</div>
+                    <div className="bg-blue-600 text-white rounded-md p-1 mb-1 cursor-pointer hover:bg-blue-700 text-xs">8:00am <br /> Dr. Devon Miles</div>
+                    <div className="bg-blue-600 text-white rounded-md p-1 mb-1 cursor-pointer hover:bg-blue-700 text-xs">9:00am <br /> Dr. Devon Miles</div>
                     <div className="text-gray-500 text-xs text-left mb-2 pl-1">10am</div>
                     <div className="text-gray-500 text-xs text-left mb-2 pl-1">11am</div>
                     <div className="text-gray-500 text-xs text-left mb-2 pl-1">12pm</div>
@@ -154,8 +129,8 @@ const Booking = () => {
                     <div className="bg-gray-200 text-gray-500 rounded-md p-1 mb-1 text-xs">Booked</div>
                     <div className="text-gray-500 text-xs text-left mb-2 pl-1">2pm</div>
                     <div className="bg-gray-200 text-gray-500 rounded-md p-1 mb-1 text-xs">Booked</div>
-                    <div className="bg-blue-600 text-white rounded-md p-1 mb-1 cursor-pointer hover:bg-blue-700 text-xs">3:00pm <br/> Dr. Bonnie Barstow</div>
-                    <div className="bg-blue-600 text-white rounded-md p-1 mb-1 cursor-pointer hover:bg-blue-700 text-xs">4:00pm <br/> Dr. Bonnie Barstow</div>
+                    <div className="bg-blue-600 text-white rounded-md p-1 mb-1 cursor-pointer hover:bg-blue-700 text-xs">3:00pm <br /> Dr. Bonnie Barstow</div>
+                    <div className="bg-blue-600 text-white rounded-md p-1 mb-1 cursor-pointer hover:bg-blue-700 text-xs">4:00pm <br /> Dr. Bonnie Barstow</div>
                     <div className="text-gray-500 text-xs text-left mb-2 pl-1">5pm</div>
                     <div className="text-gray-500 text-xs text-left mb-2 pl-1">6pm</div>
                     <div className="text-gray-500 text-xs text-left mb-2 pl-1">7pm</div>
@@ -171,78 +146,65 @@ const Booking = () => {
         return (
           <div className="p-6">
             <h2 className="text-xl font-semibold text-gray-800 mb-4">Doctor</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-8 relative"> {/* Added relative for hover card positioning */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-8">
               {doctors.map((doctor, index) => (
                 <div
                   key={index}
                   className="bg-white rounded-lg shadow-sm overflow-hidden text-center p-3 cursor-pointer hover:shadow-md transition-shadow relative"
-                  onMouseEnter={() => setHoveredDoctor(doctor)}
-                  onMouseLeave={() => setHoveredDoctor(null)}
+                  onMouseEnter={(e) => handleMouseEnter(e, doctor)}
+                  onMouseLeave={handleMouseLeave}
                 >
-                  <img
-                    src={doctor.img}
-                    alt={doctor.name}
-                    className="w-full h-32 object-cover mb-2 rounded-md" // Changed rounded-full to rounded-md and w-24 h-24 to w-full h-32
-                  />
+                  <div className="w-24 h-24 mx-auto mb-2 rounded-lg overflow-hidden border border-gray-200">
+                    <img
+                      src={doctor.img}
+                      alt={doctor.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <p className="font-medium text-gray-800 text-sm">{doctor.name}</p>
-
-                  {/* Hover Info Box for Doctors */}
-                  {hoveredDoctor === doctor && (
-                    <div className="absolute top-1/2 left-full transform -translate-y-1/2 ml-4 w-64 bg-white rounded-lg shadow-lg p-4 z-10 border border-gray-200 text-left">
-                        <img
-                            src={hoveredDoctor.img}
-                            alt={hoveredDoctor.name}
-                            className="w-16 h-16 object-cover rounded-md float-left mr-3 mb-2"
-                        />
-                      <h3 className="font-bold text-gray-900 text-md -mt-1">{hoveredDoctor.name}</h3>
-                      <p className="text-sm text-gray-600 mt-2 line-clamp-3"> {/* Added line-clamp-3 */}
-                        {hoveredDoctor.description}
-                      </p>
-                      <button className="text-blue-600 hover:underline text-sm mt-2 block">
-                        Read More
-                      </button>
-                    </div>
-                  )}
                 </div>
               ))}
             </div>
 
             <h2 className="text-xl font-semibold text-gray-800 mb-4">Dental Hygienist</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 relative"> {/* Added relative for hover card positioning */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
               {dentalHygienists.map((hygienist, index) => (
                 <div
                   key={index}
                   className="bg-white rounded-lg shadow-sm overflow-hidden text-center p-3 cursor-pointer hover:shadow-md transition-shadow relative"
-                  onMouseEnter={() => setHoveredDoctor(hygienist)}
-                  onMouseLeave={() => setHoveredDoctor(null)}
+                  onMouseEnter={(e) => handleMouseEnter(e, hygienist)}
+                  onMouseLeave={handleMouseLeave}
                 >
-                  <img
-                    src={hygienist.img}
-                    alt={hygienist.name}
-                    className="w-full h-32 object-cover mb-2 rounded-md" // Changed rounded-full to rounded-md and w-24 h-24 to w-full h-32
-                  />
+                  <div className="w-24 h-24 mx-auto mb-2 rounded-lg overflow-hidden border border-gray-200">
+                    <img
+                      src={hygienist.img}
+                      alt={hygienist.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <p className="font-medium text-gray-800 text-sm">{hygienist.name}</p>
-
-                  {/* Hover Info Box for Dental Hygienists */}
-                  {hoveredDoctor === hygienist && (
-                    <div className="absolute top-1/2 left-full transform -translate-y-1/2 ml-4 w-64 bg-white rounded-lg shadow-lg p-4 z-10 border border-gray-200 text-left">
-                        <img
-                            src={hoveredDoctor.img}
-                            alt={hoveredDoctor.name}
-                            className="w-16 h-16 object-cover rounded-md float-left mr-3 mb-2"
-                        />
-                      <h3 className="font-bold text-gray-900 text-md -mt-1">{hoveredDoctor.name}</h3>
-                      <p className="text-sm text-gray-600 mt-2 line-clamp-3">
-                        {hoveredDoctor.description}
-                      </p>
-                      <button className="text-blue-600 hover:underline text-sm mt-2 block">
-                        Read More
-                      </button>
-                    </div>
-                  )}
                 </div>
               ))}
             </div>
+
+            {/* Doctor Description Tooltip */}
+            {hoveredDoctor && tooltipPosition && (
+              <div
+                className="fixed absolute bg-white p-4 rounded-lg shadow-lg border border-gray-200 z-50 transform -translate-x-1/2"
+                style={{ 
+                  top: `${tooltipPosition.y}px`, 
+                  left: `${tooltipPosition.x}px`,
+                  transform: 'translateX(-50%) translateY(-100%)',
+                  marginTop: '-8px'
+                }}
+              >
+                <h4 className="font-semibold text-gray-900 mb-2">{hoveredDoctor.name}</h4>
+                <p className="text-gray-700 text-sm" style={{ maxWidth: '300px' }}>
+                  {hoveredDoctor.description}
+                </p>
+                
+              </div>
+            )}
           </div>
         );
       case 'pharmacy':
@@ -366,7 +328,7 @@ const Booking = () => {
         </div>
 
         {/* Tab Content */}
-        <div className="relative pb-20">
+        <div className="relative pb-20"> {/* Added pb-20 for space for Book Now button */}
           {renderTabContent()}
         </div>
       </div>

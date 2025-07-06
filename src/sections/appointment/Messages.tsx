@@ -160,7 +160,7 @@ const Messages = () => {
   };
 
   return (
-    <div className="flex flex-1 overflow-hidden p-8">
+    <div className="flex flex-1 overflow-hidden p-8 h-[94vh]"> {/* Added h-screen here */}
       <div className="bg-white rounded-lg shadow-md flex-1 flex overflow-hidden">
         {/* Left Pane: Conversation List */}
         <div className="w-80 border-r border-gray-200 flex flex-col">
@@ -171,8 +171,7 @@ const Messages = () => {
             {conversations.map((conv) => (
               <div
                 key={conv.id}
-                className={`flex items-center p-4 cursor-pointer border-b border-gray-100 last:border-b-0
-                            ${activeConversationId === conv.id ? 'bg-blue-50' : 'hover:bg-gray-50'}`}
+                className={`flex items-center p-4 cursor-pointer border-b border-gray-100 last:border-b-0 ${activeConversationId === conv.id ? 'bg-blue-50' : 'hover:bg-gray-50'}`}
                 onClick={() => handleConversationClick(conv.id)}
               >
                 <img
@@ -198,7 +197,7 @@ const Messages = () => {
         </div>
 
         {/* Right Pane: Chat Window */}
-        <div className="flex-1 flex flex-col">
+        <div className="flex-1 flex flex-col h-full"> {/* Added h-full here */}
           {activeConversation ? (
             <>
               {/* Chat Header */}
@@ -219,9 +218,7 @@ const Messages = () => {
                 {activeConversation.messages.map((msg) => (
                   <div
                     key={msg.id}
-                    className={`flex ${
-                      msg.sender === 'me' ? 'justify-end' : 'justify-start'
-                    }`}
+                    className={`flex ${msg.sender === 'me' ? 'justify-end' : 'justify-start'}`}
                   >
                     <div
                       className={`max-w-xs px-4 py-2 rounded-lg relative ${

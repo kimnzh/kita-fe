@@ -376,7 +376,7 @@ export default function ScreeningPage() {
                     x="50"
                     y="50"
                     fill="red"
-                    className="text-5xl font-bold"
+                    className="text-xl font-bold"
                     textAnchor="middle"
                     alignmentBaseline="middle"
                   >
@@ -397,7 +397,7 @@ export default function ScreeningPage() {
                   Kembali
                 </button>
                 <button
-                  onClick={() => alert('Lihat Rekomendasi clicked!')} // Placeholder for actual recommendation view
+                  onClick={() => window.location.href = '/appointment'} // Placeholder for actual recommendation view
                   className="bg-[#1F4287] hover:bg-[#1F4287]/90 text-white font-semibold py-3 px-6 rounded-lg transition duration-200"
                 >
                   Lihat Rekomendasi

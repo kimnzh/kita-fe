@@ -82,17 +82,27 @@ export default function AppointmentPage() {
       {/* Main Content */}
       <main className="flex-1 flex flex-col overflow-hidden">
         {/* Top Navbar */}
-        <header className="flex justify-end items-center h-16 bg-white shadow-sm px-6 border-b border-gray-200">
-          <div className="flex items-center space-x-2 cursor-pointer">
-            <span className="text-gray-800 font-medium">Sign in or sign up</span>
-            {/* The provided image only shows "Sign in or sign up", not an avatar here */}
-            {/* <img
-              src="/avatar.png" // Assuming avatar.png is in public folder
+       <header className="flex justify-end items-center h-16 bg-white shadow-sm px-6 border-b border-gray-200">
+          <div className="flex items-center space-x-2">
+            {/* Assuming avatar.png is in public folder or adjust path */}
+            <img
+              src="/src/assets/avatar.png"
               alt="User Avatar"
               className="w-8 h-8 rounded-full border-2 border-gray-300 object-cover"
             />
             <span className="text-gray-800 font-medium">AR. Jakir</span>
-            <ChevronDownIcon /> */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-4 w-4 text-gray-600"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clipRule="evenodd"
+              />
+            </svg>
           </div>
         </header>
 
