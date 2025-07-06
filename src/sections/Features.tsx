@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import forum from "../assets/forum.webp";
 import appointment from "../assets/appointment.webp";
 import screening from "../assets/screening.webp";
@@ -19,7 +20,7 @@ const Features: React.FC = () => {
         {/* Feature Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {/* Card 1: Forum */}
-          <div className="bg-gradient-to-b from-gray-800/60 to-gray-900/60 rounded-lg overflow-hidden shadow-lg">
+          <Link to="/forum" className="bg-gradient-to-b from-gray-800/60 to-gray-900/60 rounded-lg overflow-hidden shadow-lg transition-opacity hover:opacity-80">
             <div className="h-48 bg-blue-200 relative">
               <img
                 src={forum}
@@ -35,7 +36,7 @@ const Features: React.FC = () => {
                 Diskusi mengenai masalah seksualmu secara anonim
               </p>
             </div>
-          </div>
+          </Link>
 
           {/* Card 2: Appointment */}
           <div className="bg-gradient-to-b from-gray-800/60 to-gray-900/60 rounded-lg overflow-hidden shadow-lg">
